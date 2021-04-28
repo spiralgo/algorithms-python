@@ -1,1 +1,3 @@
-# algorithm-pythons
+# algorithms-python
+
+ "Welcome to Spiralgo Python repo!"
