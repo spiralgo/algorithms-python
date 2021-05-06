@@ -1,10 +1,11 @@
 import random
 
-def wiggle_sort(nums: list[int]) -> list[int]:
-    for i in range(len(nums) - 1):
-            if (i % 2 == 0) == (nums[i] > nums[i + 1]):
-                nums[i], nums[i + 1] = nums[i + 1], nums[i]
-    return nums
+class Solution:
+    def wiggleSort(self, nums: list[int]) -> None:
+        for i in range(len(nums) - 1):
+                if (i % 2 == 0) == (nums[i] > nums[i + 1]):
+                    nums[i], nums[i + 1] = nums[i + 1], nums[i]
+        return nums
 
 
 if __name__ == "__main__":
@@ -12,6 +13,8 @@ if __name__ == "__main__":
     for _ in range(10):
         A.append(random.randint(1,20))
     print(A)
-    wiggle_sort(A)
+
+    solution = Solution()
+    solution.wiggleSort(A)
     print(A)
 
