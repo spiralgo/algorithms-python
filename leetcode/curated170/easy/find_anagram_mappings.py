@@ -2,11 +2,11 @@ class Solution:
     def anagramMappings(self, A: list[int], B: list[int]) -> list[int]:
 
         locations = {}
-        for i in range(len(B)):
-            locations[B[i]] = i
+        for i, b in enumerate(B):
+            locations[b] = i
         mapping = []
-        for x in A:
-            mapping.append(locations[x])
+        for a in A:
+            mapping.append(locations[a])
         return mapping
 
 
