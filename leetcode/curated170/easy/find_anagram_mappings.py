@@ -1,12 +1,8 @@
 class Solution:
     def anagramMappings(self, A: list[int], B: list[int]) -> list[int]:
 
-        locations = {}
-        for i, b in enumerate(B):
-            locations[b] = i
-        mapping = []
-        for a in A:
-            mapping.append(locations[a])
+        locations = {b: i for i, b in enumerate(B)}
+        mapping = [locations[a] for a in A]
         return mapping
 
 
